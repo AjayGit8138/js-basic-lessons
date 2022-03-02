@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let thisIsAString = 'this is string';
+        let alsoAsString = '25';
+        let isANumber = 25;
+        let isEqual = (alsoAsString == isANumber );
+        console.log(isEqual);
+        isEqual = (alsoAsString === isANumber );
+        console.log(isEqual);
+        let concat = alsoAsString + isANumber;
+        console.log(concat);
+        let add = isANumber + isANumber;
+        console.log(add);
+        let alsoNumber = 3.05;
+        console.log(alsoNumber);
+        let flerror = 0.06 + 0.01;
+        console.log(flerror);
+        let exponent = 1.23e+3;
+        console.log(exponent);
+        let isTrue = true;
+        console.log(isTrue);
+        let isFalse = false;
+        console.log(isFalse);
+        let isArray = ['0',1,'one',3,4,'5'];
+        console.log(isArray);
+        console.log(isArray[4]);
+
+        let isobject = {
+            'color':'blue',
+            'dog':'bark',
+            'array':[0,1,2,3,4],
+            'myfunction': function (){
+                console.log('Do something');
+            }
+
+        }
+        let dog1 = isobject.dog;
+        console.log(dog1);
+        isobject.myfunction();
+        let functionA = function(){return "Good Day You Have"};
+        let functionB = function(){
+            return "Fine Day"};
+            let resA = functionA();
+            console.log(resA);
+            let resb = functionB();
+            
+            console.log(resb);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis animi sequi necessitatibus <b>Null</b>voluptatem quod iusto dolorem praesentium doloremque! Aliquam, sint modi harum recusandae consequuntur doloremque excepturi qui repellendus ipsa!
+    </div>
+    <script type="text/javascript">
+        console.log('before');
+        const p1 = document.querySelectorAll('p');
+        console.log(p1);
+    </script>
+    <p>Paragraph Printing</p>
+    <div id="greeting" style="background-color: olive;" onclik="greetings();"></div>
+     <button onclick="goodbye();">greetings</button>
+    
+    
+</body>
+<script type="text/javascript">
+    console.log('After');
+    const p2 = document.querySelector('p');
+    console.log(p2);
+
+    document.getElementById('greeting').innerHTML = "Hello World";
+
+    function goodbye()
+    {
+        document.getElementById('greeting').innerHTML = "Hello World";
+    }
+    function greetings()
+    {
+        document.getElementById('greeting').innerHTML = "Hello World";
+
+    }
+</script>
+</html>

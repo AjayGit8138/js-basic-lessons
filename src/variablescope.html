@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variablescope</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var iGlobal = 'This is a Global';
+    function scope()
+    {
+        alsoGlobal = 'This is a global variable';
+        var Tempval = 'destroyable variable insidefunction';
+        function subfunction()
+        {
+            subglobal = 'Global  variable present inside a subfunction';
+            console.log(`Inside the subfunction:${Tempval}`);
+            var isPrivate = 'private inside function';
+        }
+        subfunction();
+        console.log(isPrivate);
+    }
+    console.log(iGlobal);
+    // console.log(subglobal);
+    scope();
+    console.log(alsoGlobal);
+    console.log(subglobal);
+    
+</script>
+</html>

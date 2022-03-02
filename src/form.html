@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form JS</title>
+</head>
+<body>
+    <form name="myform" action="pagea.html">
+        <p>Name:<input type="text" placeholder="Enter Your Name" name="name" size="25"></p>
+        <p>Email:<input type="text" placeholder="Enter Your Email" name="email" size="25"</p>
+        <p>Age:<input type="text" placeholder="Enter the Age" name="age" size="25"</p>
+        <p>job:<select title="joblist" name="job">
+            <option>selectone</option>
+            <option value="testing">testing</option>
+            <option value="Programming">Programmer</option>
+
+        </select></p>
+        <p><input type="submit" name="send" onclick="checkform();"></p>
+        <p><button type="button" onclick="openwindow();">B1</button></p>
+    </form>
+    
+</body>
+<script type="text/javascript">
+    function checkform()
+    {
+       
+        var fname = document.myform.name;
+        var femail = document.myform.email;
+        var fage = document.myform.age;
+        var fjob = document.myform.job;
+        console.log(fname);
+        if(fname.value.indexOf(" ") == -1)
+        {
+            alert("Enter Your Name");
+            fname.focus();
+            return;
+        }
+        if(femail.value.indexOf("@") == -1 || femail.value.indexOf("."))
+        {
+            alert("Enter a valid email");
+            femail.focus();
+            return;
+        }  
+        let formagevalue = parseInt(fage.value);
+        if(!(formagevalue>0))
+        {
+            alert("Enter a valid age");
+            fage.focus();
+            return;
+        }
+        else if(formagevalue <8 || formagevalue >58)
+        {
+            alert("age must be 8 between 58");
+            fage.focus();
+            return;
+        }
+        if(fjob.selectedIndex == 0)
+        {
+            alert("Select a job what  you are working");
+            fjob.focus();
+            return;
+        }
+        // document.myform.submit();
+    }
+    function openwindow()
+    {
+        mywindow = window.open("paged.html","page2");
+    }
+</script>
+</html>
