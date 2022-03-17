@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <button class="clickme">clickme</button>
+    <button class="stop" onclick="clsinterval();">stop</button>
+</body>
+<script>
+    const button = document.querySelector('.clickme');
+    const handler = function () {
+        console.log("another function");
+    }
+    function handleclick() {
+        console.log("Great clicking");
+    }
+    const handler2 = function () { console.log("nice job") };
+    setTimeout(handler2, 3000);
+    setInterval(handler2, 3000);
+    button.addEventListener('click', handler);
+    button.addEventListener('click', handleclick);
+    var setintervalrun = setInterval(handler2, 3000);
+
+    function clsinterval() {
+        clearInterval(setintervalrun);
+        console.log("stopped");
+    }
+</script>
+
+</html>

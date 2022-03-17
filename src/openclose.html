@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lopenclose</title>
+</head>
+<body>
+    <div>
+        <button onclick="openwindow();">Open New</button>
+        <button onclick="closewin();">Closewin</button>
+    </div>
+    
+</body>
+<script type="text/javascript">
+    function openwindow()
+    {
+    // myWindow =  window.open("https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp","page2","height=300,width=400");
+    myWindow =  window.open("https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp","page2","menubar-1");
+
+    }
+    function closewin()
+    {
+        myWindow.close();
+    }
+</script>
+</html>

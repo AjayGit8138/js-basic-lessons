@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JunkDocument</title>
+</head>
+
+<body>
+    <p>
+        <imput type="scroll" onclick="move()">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut dolorem molestias, aliquam unde doloremque
+                eum odio exercitationem quibusdam nobis, rem eveniet sed quo expedita explicabo recusandae a voluptas
+                veritatis iusto.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, provident, eius laboriosam quis eaque
+                eum aut tempore dolor quidem, voluptatem aliquam maxime cupiditate pariatur neque reprehenderit
+                assumenda? Possimus, vel ad.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quaerat rerum deserunt deleniti velit,
+                suscipit aliquid obcaecati iste enim voluptas modi omnis minima eligendi amet officiis soluta
+                dignissimos asperiores autem!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, earum sunt soluta magnam veritatis,
+                voluptates atque perspiciatis quia libero debitis mollitia magni consequuntur nisi illo nulla. Nostrum
+                exercitationem laboriosam vero.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto odio quibusdam aspernatur ipsam voluptas
+                eaque aliquam labore ab corporis. Dolor autem qui quia porro temporibus quam quisquam veritatis
+                praesentium officiis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At obcaecati modi consectetur illo quia,
+                dolorum laboriosam ea, eum possimus enim, libero veritatis! Facere, doloribus ullam. Dolores, ab
+                suscipit! Voluptas, velit!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique odio, nulla voluptates nemo ipsum
+                quos expedita sed harum eum, perspiciatis voluptatum a libero tempore possimus nostrum at beatae id
+                nihil.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit atque pariatur repellat
+                laudantium id, mollitia distinctio ratione deserunt harum non debitis inventore rem illo aut voluptas
+                adipisci doloremque delectus fugit!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint, molestiae hic fugit optio molestias
+                quae blanditiis quibusdam! Repellendus, delectus minus quaerat ut itaque odit ea sint commodi tempora
+                nisi!
+            </p>
+</body>
+<script>
+    function move() {
+        scrollTo({
+            top: 500,
+            left: 0,
+            behavior: "smooth"
+        })
+    }
+
+    const doc = doctorize('ajay');
+    console.log(doc);
+    function doctorize(firstname) {
+        return `dr.${firstname}`
+    }
+</script>
+
+</html>
