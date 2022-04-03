@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.css");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.secondtable{
+  display: none;
+}
+.showsecondtable{
+  display: block;
+}
+body {
+  background-image: url('../src/assets/health.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Bebas Neue', cursive;
+  overflow: scroll;
+}
+.pcrForm{
+  border: 1px solid slateblue;
+  width: 100%;
+}
+
+.error{
+  color: red;
+}
+.search{
+  margin-top: 80px;
+}
+.space {
+  margin-top: 10px;
+  margin-left: 5%;
+}
+.displaytable {
+  margin-top: 10%;
+}
+#displaying-data,
+#result-table {
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  width: 100%;
+}
+#displaying-data td,
+#displaying-data th,
+#result-table td,
+#result-table th {
+  padding: 8px;
+}
+#result-table,
+#displaying-data tr:hover {
+  background-color: #ddd;
+}
+#displaying-data th,
+#result-table th {
+  background-color: rgb(134, 97, 83);
+  color: white;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  text-align: left;
+}
+/* .pcrForm{
+  left: 30%;
+  position: relative;
+} */

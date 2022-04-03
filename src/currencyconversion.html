@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currencyconversion</title>
+    <link rel="stylesheet" href="currencystyle.css">
+    <script type="module" src="./element.js"></script>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="currencyconverter">
+            <div class="row">
+                <form name="myForm">
+                    <div class="firstrow">
+                        <div>
+                            <input type="number" name="inputval" id="inputvalue"
+                                placeholder="Enter the amount to convert">
+                        </div>
+
+                        <select name="currency" class="fromcurrency" id="money" onmouseout="this.size=1;">
+
+                        </select>
+
+
+                    </div>
+                    <div class="secondrow">
+                        <input type="text" placeholder="enter current amount">
+                        <select name="toconversion" class="showitem" id="toconversion" onmouseout="this.size=1;">
+
+                        </select>
+                    </div>
+                    <div class="thirdrow">
+                        <input type="text" placeholder="enter current amount">
+                        <input type="text" name="convertedmoney" id="converted" placeholder="convertedmoney">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+<script>
+</script>
+
+</html>

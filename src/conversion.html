@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Module</title>
+    <link rel="stylesheet" href="currenconv.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="card">
+                <div class="grid-container">
+                    <input type="number" name="number" class="given-currency">
+                    <div class="from-country">
+                        <select name="country" title="Select a currency">
+                            <option>Select a currency</option>
+                        </select>
+                    </div>
+                    <div class="in">in</div>
+                    <div class="to-country">
+                        <select name="to-country" title="Select a currency">
+                            <option>Select a currency</option>
+                        </select>
+                    </div>
+                    <div class="is">is</div>
+                    <input placeholder="$0" type="text" class="converted-currency">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="./currencyhandler.js"></script>
+</body>

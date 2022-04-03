@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Js Practice</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function creategreeting(greeting = '') {
+        const greet = greeting.toUpperCase();
+        return function (name) {
+            return `${greet} ${name}`
+        }
+    }
+    function createGame(gameName) {
+        let score = 0;
+        return function win() {
+            score++;
+            return `Your name ${gameName} score is ${score}`;
+        }
+    }
+    const callgame = createGame('gta');
+    console.log(callgame());
+    const hockeygame = createGame('hockey');
+    const soccergame = createGame('soccer');
+    console.log(hockeygame());
+    console.log(hockeygame());
+    console.log(hockeygame());
+    console.log(soccergame());
+    console.log(soccergame());
+    console.log(soccergame());
+</script>
+
+</html>

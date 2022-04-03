@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 80px;
+  margin-left: 200px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 320px 380px;
+  grid-template-areas:
+    "given-currency from-country"
+    "in to-country"
+    "is converted-currency";
+  width: 200px;
+  text-align: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  width: 750px;
+}
+select,
+.from-country,
+.to-country,
+.given-currency,
+.in,
+.is,
+.converted-currency {
+  background-color: rgb(243, 200, 7);
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+.converted-currency::placeholder {
+  color: black;
+  text-align: center;
+}
+
+.currencyconverter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 380px 400px;
+  grid-template-areas:
+    "inputval fromcurrency"
+    "in toconvert";
+}
+.row {
+  border: 1px solid yellow;
+  height: 380px;
+  width: 40%;
+}
+.firstrow,
+.secondrow,
+.thirdrow {
+  display: inline-block;
+  background-color: yellowgreen;
+  margin-top: 40%;
+  height: 200px;
+  width: 100%;
+  margin: 10px;
+  position: sticky;
+}
+select {
+  background-color: yellow;
+  overflow: scroll;
+  padding: 20px;
+  height: 50px;
+  width: 200px;
+  margin: 50px;
+}
+input[type="text"] {
+  background-color: yellow;
+  height: 80px;
+  width: 200px;
+}
+input[type="number"] {
+  background-color: yellow;
+  height: 80px;
+  width: 200px;
+}

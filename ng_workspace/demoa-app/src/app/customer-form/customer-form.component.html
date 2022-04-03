@@ -1,0 +1,41 @@
+<p>customer-form works!</p>
+<div class="panel-heading">customerform</div>
+<form name="customerform" #customerFormGroup="ngForm" (submit)="saveCustomer(customerFormGroup)">
+    <div class="form-group" [class.has-error]="firstNameFormControl">
+        <label for="username">Username:</label>
+        <input class="form-control" placeholder="enter yout name" [ngModel]="customerModel.fname" required minlength="3"
+            #firstNameFormControl="ngModel" name="fname">
+    </div>
+    <div class="help-block" *ngIf="firstNameFormControl.invalid && firstNameFormControl.touched">
+        <span *ngIf="firstNameFormControl.errors?.['required']"><mark>lastname is required</mark></span>
+        <span *ngIf="firstNameFormControl.errors?.['minlength']">More than three characters is required</span>
+    </div>
+    <div class="form-group" [class.has-error]="lastnameFormControl">
+        <label for="lstname">lastname:</label>
+        <input class="form-control" placeholder="enter yout lastname" [ngModel]="customerModel.lname"
+            #lastnameFormControl="ngModel" name="lname">
+    </div>
+    <div class="help-block" *ngIf="lastnameFormControl.invalid && lastnameFormControl.touched">
+        <span *ngIf="lastnameFormControl.errors?.['required']">Lastname is required</span>
+        <span *ngIf="lastnameFormControl.errors?.['minlength']">More than three characters is required</span>
+    </div>
+    <div class="form-group">
+        <label for="Email">Email:</label>
+        <input class="form-control" placeholder="enter yout Email" #emailFormControl="ngModel"
+            [ngModel]="customerModel.email" name="email">
+    </div>
+    <div class="form-group">
+        <button class="btn-primary">submit</button>
+    </div>
+</form>
+
+<pre class="bg-info card" style="width:18rem">
+    is pristine:{{customerFormGroup.pristine}}
+    is dirty:{{customerFormGroup.dirty}}
+
+    is valid:{{customerFormGroup.valid}}
+    is invalid:{{customerFormGroup.invalid}}
+
+    is untouched:{{customerFormGroup.untouched}}
+    is touched:{{customerFormGroup.touched}}
+</pre>

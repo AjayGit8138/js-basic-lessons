@@ -1,0 +1,154 @@
+<div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="card rounded-0 shadow">
+                    <div class="card-body">
+
+                        <form class="well form-horizontal col-lg-12" name="pcrForm"
+                            (ngSubmit)="testFormGroup.valid && checkform()" #testFormGroup="ngForm">
+                            <fieldset>
+                                <div class="form-group" [class.has-error]="firstName.invalid && firstName.touched">
+                                    <label for="PersonName">PersonName:</label>
+                                    <input type="text" class="form-control" required #firstName="ngModel"
+                                        [(ngModel)]="personname" name="personname" placeholder="Enter personname">
+
+                                    <span class="help-block error"
+                                        *ngIf="firstName.invalid && firstName.touched">PersonName
+                                        should
+                                        not
+                                        be
+                                        Blank,name required</span>
+
+                                </div>
+                                <div class="form-group"
+                                    [class.has-error]="aadharcontrol.invalid && aadharcontrol.touched">
+                                    <label for="aadhar-no">Aadhar-No:</label>
+                                    <input type="text" class="form-control" required #aadharcontrol="ngModel"
+                                        [(ngModel)]="aadharno" name="aadharno" placeholder="Enter personname">
+                                    <span class="help-block error"
+                                        *ngIf="aadharcontrol.invalid && aadharcontrol.touched">Hi!Aadhar
+                                        No
+                                        Must
+                                        be Required*
+                                    </span>
+                                </div>
+                                <div class="form-group" [class.has-error]="birthdate.pristine && birthdate.touched">
+                                    <label for="dob">Date-of-Birth:</label>
+                                    <input type="date" required [(ngModel)]="dob" name="dob" #birthdate="ngModel"
+                                        class="form-control">
+                                    <span class="help-block error"
+                                        *ngIf="birthdate.pristine && birthdate.touched">Hi!birthdate
+                                        should
+                                        be
+                                        select*
+
+                                    </span>
+                                </div>
+                                <div class="form-group" [class.has-error]="citiname.touched && citiname.invalid">
+                                    <label for="city">City Name:</label><br>
+                                    <!-- <select class="form-control" name="city" [(ngModel)]="setcity" id="displaycity">
+                        <option *ngfor="let cities of setcity" [value]="setcity" class="form-control">{{setcity}}
+                        </option> -->
+                                    <input type="text" #citiname="ngModel" required [(ngModel)]="selectcity"
+                                        name="selectcity" placeholder="Enter City Name" class="form-control">
+                                    <span class="help-block error"
+                                        *ngIf="citiname.invalid && citiname.touched">Hi!Cityname
+                                        should
+                                        be
+                                        Enter*
+
+                                    </span>
+                                    <!-- </select> -->
+
+                                </div>
+                                <div class="form-group" [class.has-error]="testdate.pristine && testdate.touched">
+                                    <label for="dateoftime">Dateoftest</label><br>
+                                    <input type="date" id="dateoftest" required #testdate="ngModel"
+                                        [(ngModel)]="dateoftest" name="dateoftest" class="form-control"
+                                        name="dateoftest">
+                                    <span class="help-block error"
+                                        *ngIf="testdate.pristine && testdate.touched">Hi!testdate
+                                        should
+                                        be
+                                        select*
+
+                                    </span>
+                                </div>
+                                <div class="form-group" [class.has-error]="testtime.pristine && testtime.touched">
+                                    <label for="timeoftest">Timeoftest:</label><br>
+                                    <input type="time" id="time" #testtime="ngModel" required min="09:00" max="18:00"
+                                        [(ngModel)]="timeoftest" class="form-control" name="currenttime">
+                                    <span class="help-block error"
+                                        *ngIf="testtime.pristine && testtime.touched">Hi!test-time
+                                        should
+                                        be
+                                        select*
+
+                                    </span>
+                                </div>
+                                <div class="form-group" [class.has-error]="testresult.touched && testresult.invalid">
+                                    <label class="form-check-label" for="Result">Result:</label><br>
+                                    <input type="radio" name="result" required #testresult="ngModel" id="gender1"
+                                        [(ngModel)]="result" class="form-check-input" value="positive">Positive
+                                    <input type="radio" name="result" required #testresult="ngModel" id="gender2"
+                                        [(ngModel)]="result" class="form-check-input" value="negative">Negative
+                                    <span class="help-block error"
+                                        *ngIf="testresult.touched && testresult.invalid">Hi!Result
+                                        should
+                                        be
+                                        select*
+
+                                    </span>
+                                </div>
+                                <div class="form-group"
+                                    [class.has-error]="testedlabname.touched && testedlabname.invalid">
+                                    <label for="Labname">Labname:</label>
+                                    <input type="text" class="form-control" required #testedlabname="ngModel"
+                                        [(ngModel)]="labname" name="labname" placeholder="Enter The Lab name">
+                                    <span class="help-block error"
+                                        *ngIf="testedlabname.touched && testedlabname.invalid">Hi!Labname
+                                        should
+                                        be
+                                        provide*
+
+                                    </span>
+                                </div>
+                                <div class="form-group" [class.has-error]="report.touched && report.invalid">
+                                    <label for="ReportNo">Report-No:</label>
+                                    <input type="text" class="form-control" required #report="ngModel"
+                                        [(ngModel)]="reportno" name="reportno" placeholder="Enter personname">
+                                    <span class="help-block error" *ngIf="report.touched && report.invalid">Hi!Report-No
+                                        should
+                                        be
+                                        provide*
+
+                                    </span>
+                                </div>
+                                <div class="form-group" [class.has-error]="gendergroup.touched && gendergroup.invalid">
+                                    <label class="form-check-label" for="Result">Result:</label><br>
+                                    <input type="radio" name="gender" id="gender1" required #gendergroup="ngModel"
+                                        [(ngModel)]="gender" class="form-check-input" value="Male">Male
+                                    <input type="radio" name="gender" id="gender2" required #gendergroup="ngModel"
+                                        [(ngModel)]="gender" class="form-check-input" value="Female">Female
+                                    <input type="radio" name="gender" id="gender2" required #gendergroup="ngModel"
+                                        [(ngModel)]="gender" class="form-check-input" value="Others">Others
+                                    <span class="help-block error"
+                                        *ngIf="gendergroup.touched && gendergroup.invalid">Hi!Gender
+                                        must
+                                        be
+                                        select*
+
+                                    </span>
+                                </div>
+                                <div class="form-group searchtable">
+                                    <button type="submit" class="btn btn-primary space">AddData</button>
+                                    <button type="button" (click)="resetform(testFormGroup);"
+                                        class="btn btn-danger space">ResetForm</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
