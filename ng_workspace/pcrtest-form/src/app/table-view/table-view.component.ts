@@ -75,6 +75,8 @@ function finding(input:any)
   var count = 0;
   var k=1;
   var i=1;
+  var notify = document.getElementById("searchnotification") as HTMLInputElement;
+
    var table = (<HTMLTableElement>document.getElementById("displaying-data"));
    var rowDetails =  table.getElementsByTagName("tr").length;
   console.log(rowDetails);
@@ -93,6 +95,8 @@ for(var m=0;m<rowDetails-2;m++)
   
     if(rowseach == input)
     {
+     notify.classList.remove("displaynotify");
+
       for(var h=0;h<10;h++)
       {
        resultshow =  rowid.tBodies[0].rows[count].cells.item(h)?.innerText;
@@ -122,6 +126,9 @@ for(var m=0;m<rowDetails-2;m++)
        cell9.innerHTML = `${array[i++]}`;
        cell10.innerHTML = `${array[i++]}`;
         console.log("value present" + rowseach);
+  }
+  else{
+   notify.classList.add("displaynotify");
   }
 }
 count++;
