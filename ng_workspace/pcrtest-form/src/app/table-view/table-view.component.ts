@@ -22,8 +22,7 @@ export class TableViewComponent implements OnInit {
   console.log("Hai output");
   var findval = document.getElementById("findval") as HTMLInputElement;
   finding(findval.value);
-  var showtable = document.getElementById("resultdisplay") as HTMLTableElement;
-  showtable.classList.toggle("showsecondtable");
+  
   }
    
 }
