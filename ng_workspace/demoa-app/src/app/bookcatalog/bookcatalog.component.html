@@ -1,0 +1,14 @@
+<p>bookcatalog works!</p>
+<div class="page-header">
+    <div class="list-group">
+        <div *ngFor="let book of books; let idx = index; let isFirst = first" class="list-group-book">
+            <button type="button" class="btn btn-primary">
+                #:
+                <span class="badge badge-primary" [innerText]="idx + 1"></span>
+            </button>
+            <app-book [book]="book"></app-book>
+            <app-tab [book]="book" [idx]="idx"></app-tab>
+
+        </div>
+    </div>
+</div>

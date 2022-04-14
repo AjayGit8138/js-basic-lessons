@@ -9,6 +9,7 @@ import { insertrecord } from '../table-view/table-view.component';
 export class PcrFormComponent implements OnInit {
 
   constructor() { }
+  // store:any = [];
   personname:string = "";
   aadharno:number = 0;
   dob:number =0;
@@ -46,18 +47,18 @@ export class PcrFormComponent implements OnInit {
       gendername:this.gender,
      }
      this.count++;
+    //  this.store.push(this.person);
+    //  console.log(this.store);
   var printval =Object.values(this.person);
-  
-     console.log(array);
     insertrecord(this.count,printval);
-    
+
      console.log(this.count);
      console.log(this.person);
     
   }
   
-    array = Object.entries(this.person);
+   
  
 }
 
-export let array:any[]=[];
+

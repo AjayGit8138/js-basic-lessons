@@ -1,0 +1,47 @@
+<p>read-json works!</p>
+<button class="btn-primary" (click)="readdata();">Jsondata</button>
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataitem of datacollection;let idx=index">
+                <td>{{dataitem.name}}</td>
+                <td>{{dataitem.email}}</td>
+                <td>{{dataitem.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <h1>Bootstrap Grid Practice</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3 style="font-size: 3vw;background-color: aliceblue;">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Accusantium aliquam
+                praesentium quam
+                consequuntur totam, error quibusdam, repudiandae laborum consequatur, distinctio facilis dolor ratione.
+                Accusantium assumenda dolores eos doloremque tempora laborum.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quidem similique vitae. Iste,
+                veniam necessitatibus. Itaque aliquid, iste nobis odit sunt nam numquam ea accusamus eveniet quia,
+                fugiat libero impedit!
+            </h3>
+        </div>
+        <div class="col-sm-6">
+            <h3 style="font-size: 3vw;background-color: blanchedalmond;">Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Deleniti earum amet,
+                nihil facilis molestias
+                similique quo, cum iste aliquid, laudantium reprehenderit ducimus itaque voluptates ipsam. Veritatis rem
+                maiores consequuntur sequi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolores nulla unde quisquam nobis optio
+                dolore ipsum magnam explicabo eos! Voluptas officia nisi ratione! Fuga voluptatum earum nostrum ratione
+                debitis.
+            </h3>
+        </div>
+    </div>
+</div>

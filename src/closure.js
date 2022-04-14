@@ -33,8 +33,8 @@ function creategreeting(greeting = '')
         return `${greet} ${name}`
     } 
 }
-const callgreet = creategreeting('ajay');
-console.log(callgreet('ajay'));
+const callgreet = creategreeting('call from outer'+'ajay');
+console.log(callgreet('this is for innerfunction'+'ajay'));
 const sayhello = creategreeting('hi');
 const sayvanakkam = creategreeting('vanakkam');
 console.log(sayhello('ajay'));

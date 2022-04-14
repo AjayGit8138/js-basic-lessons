@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="studentForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" placeholder="Enter a Username" class="form-control" required name="username"
+                        formControlName="username" />
+                    <span class="help-block text-danger"
+                        *ngIf="studentForm.get('username')?.touched && studentForm.get('username')?.invalid">username
+                        you
+                        enter is not Valid</span>
+                </div>
+                <div class="form-group">
+                    <label for="regno">RegisterNo:</label>
+                    <input type="number" placeholder="Enter a Registration Number" class="form-control" required
+                        name="regisno" formControlName="regisno" />
+                    <span class="help-block text-danger"
+                        *ngIf="studentForm.get('regisno')?.invalid && studentForm.get('regisno')?.touched">Registration
+                        No is Not Entered*</span>
+                </div>
+                <div class="form-group">
+                    <label for="regno">Department:</label>
+                    <input type="text" placeholder="Enter a Deparment`" class="form-control" required name="department"
+                        formControlName="department" />
+                    <span class="help-block text-danger"
+                        *ngIf="studentForm.get('department')?.invalid && studentForm.get('department')?.touched">Department
+                        is not entered*
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" placeholder="Enter a Email address" class="form-control" required name="email"
+                        formControlName="email" />
+                    <span class="help-block text-danger"
+                        *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid">you
+                        have not
+                        entered a
+                        Email*
+
+                    </span>
+                    <span class="help-block text-danger" *ngIf="studentForm.get('email')?.errors?.['pattern']">Email is
+                        Not valid!..
+
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
